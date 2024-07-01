@@ -57,4 +57,37 @@ Send a `POST` request to `/signup` with the following JSON payload Or can submit
   "password": "your_password"
 }
 
+```
 
+### User Registration
+
+Send a POST request to /login with the following JSON payload OR can submit through form:
+```json
+{
+  "email": "user@example.com",
+  "password": "your_password"
+}
+```
+
+### Protected Routes
+
+Use the `authMiddleware` to protect any route that requires authentication. For example:
+
+```javascript
+const authMiddleware = require('./middlewares/authMiddleware');
+
+// Example of a protected route
+app.get('/dashboard', authMiddleware, (req, res) => {
+  res.send('Welcome to your dashboard!');
+});
+```
+
+## 🛠️ Important Features
+
+- **Custom Middlewares**: The project includes custom middlewares like `cookieParser` for parsing cookies and `authMiddleware` for protecting routes.
+- **Automatic Session Deletion**: User sessions are automatically deleted from the database when they expire, ensuring efficient session management.
+- **Secure Cookie Management**: Cookies are managed securely with appropriate flags (`HttpOnly`, `Secure`, `SameSite`) to protect against common web vulnerabilities.
+
+## 🤝 Contributing
+
+Contributions are welcome! If you have any improvements or suggestions, please feel free to open an issue or create a pull request.
