@@ -91,3 +91,7 @@ app.get('/dashboard', authMiddleware, (req, res) => {
 ## 🤝 Contributing
 
 Contributions are welcome! If you have any improvements or suggestions, please feel free to open an issue or create a pull request.
+
+## Navigation
+- My next project [SingUp Form](https://github.com/MAliHassanDev/login-and-signup-form-in-expressjs)
+- My previous project [Breakout](https://github.com/MAliHassanDev/Break-Out-Game)
